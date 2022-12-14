@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a password</h2>
+        </div>
+        <div class="car-body">
+          <div class="card-criteria" id="card-prompt">
+            <div class="input-group">
+              <label><b>Slide to choose password length: </b></label>
+              <input type="range" id="length" min="8" max="128" step="1" />
+              <span id="length-result">50</span>
+            </div>
+            <br />
+            <label
+              class="container"
+              style="font-family: fantasy; color: rgb(3, 3, 3)"
+              >Check box to include uppercase characters
+              <input type="checkbox" id="upperchars"  />
+              <span class="checkmark"></span>
+            </label>
+            <br />
+            <label
+              class="container"
+              style="font-family: fantasy; color: rgb(3, 3, 3)"
+              >Check box to include lowercase characters
+              <input type="checkbox" id="lowerchars"  />
+              <span class="checkmark"></span>
+            </label>
+            <br />
+            <label
+              class="container"
+              style="font-family: fantasy; color: rgb(3, 3, 3)"
+              >Check box to include numeric characters
+              <input type="checkbox" id="numericchars"  />
+              <span class="checkmark"></span>
+            </label>
+            <br />
+            <label
+              class="container"
+              style="font-family: fantasy; color: rgb(3, 3, 3)"
+              >Check box to include special characters
+              <input type="checkbox" id="specialchars"  />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+            autocomplete="off"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button class="btn" id="generate">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
